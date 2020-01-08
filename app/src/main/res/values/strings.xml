@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MyNavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="news_page_title">News</string>
+    <string name="profile_page_title">Profile</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="setup_title">Setup</string>
 </resources>
