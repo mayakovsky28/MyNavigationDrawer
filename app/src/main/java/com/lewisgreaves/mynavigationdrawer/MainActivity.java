@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.configureToolbar();
         this.configureDrawerLayout();
         this.configureNavigationView();
+
+        this.showFirstFragment();
     }
 
     @Override
@@ -67,6 +69,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    private void showFirstFragment() {
+        Fragment visibleFragment = getSupportFragmentManager().findFragmentById(R.id.activity_main_frame_layout);
+        if (visibleFragment == null){
+            // 1.1 - Show News Fragment
+            this.showFragment(FRAGMENT_NEWS);
+            // 1.2 - Mark as selected the menu item corresponding to NewsFragment
+            this.navigationView.getMenu().getItem(0).setChecked(true);
+        }
     }
 
     private void showFragment (int fragmentIdentifier) {

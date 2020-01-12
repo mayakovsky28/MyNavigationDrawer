@@ -28,4 +28,8 @@ public class NewsFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_news, container, false);
     }
 
+    public static NewsFragment newInstance() {
+        return new NewsFragment();
+    }
+
 }
